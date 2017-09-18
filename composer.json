@@ -1,0 +1,13 @@
+{
+    "name": "leytech/leytech_prototypeupdate",
+    "type": "magento-module",
+    "description": "Module to update the prototype JS library cleanly and without rewrites or other mischief.",
+    "homepage": "https://github.com/leytech/Leytech_PrototypeUpdate",
+    "require": {
+        "php": ">=5.4.0",
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra":{
+        "magento-root-dir": "src/"
+    }
+}
