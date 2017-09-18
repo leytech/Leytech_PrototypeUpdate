@@ -1,6 +1,12 @@
 ## Update Prototype JavaScript library for Magento 1
 A Magento 1 extension to cleanly update the Prototype Javascript library to 1.7.2 (or other versions).
 
+To my knowledge 1.7.2 should be compatible with Magento 1 and resolves compatibility issues with several third-party JS libraries including Feefo reviews and the Google maps API.
+
+The extension is clean and doesn't rewrite any blocks or other nonsense and doesn't touch any core files. The original prototype.js is not touched and can still be used by either disabling the extension in the admin options or by selecting "Default Magento" as the prototype version.
+
+Test and test and test before using in a live environment!
+
 ### Features
 
 - Provides an admin option to cleanly update the Prototype library to version 1.7.1, 1.7.2 or 1.7.3
