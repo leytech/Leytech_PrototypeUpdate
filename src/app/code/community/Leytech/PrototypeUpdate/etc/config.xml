@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package    Leytech_PrototypeUpdate
+ * @author     Chris Nolan (chris@leytech.co.uk)
+ * @copyright  Copyright (c) 2017 Leytech
+ * @license    https://opensource.org/licenses/MIT  The MIT License  (MIT)
+ */
+-->
+<config>
+    <modules>
+        <Leytech_PrototypeUpdate>
+            <version>1.0.0</version>
+        </Leytech_PrototypeUpdate>
+    </modules>
+    <global>
+        <helpers>
+            <leytech_prototypeupdate>
+                <class>Leytech_PrototypeUpdate_Helper</class>
+            </leytech_prototypeupdate>
+        </helpers>
+        <models>
+            <leytech_prototypeupdate>
+                <class>Leytech_PrototypeUpdate_Model</class>
+            </leytech_prototypeupdate>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_layout_render_before>
+                <observers>
+                    <leytech_prototypeupdate_observer>
+                        <class>Leytech_PrototypeUpdate_Model_Observer</class>
+                        <method>replacePrototypeLibrary</method>
+                    </leytech_prototypeupdate_observer>
+                </observers>
+            </controller_action_layout_render_before>
+        </events>
+    </frontend>
+    <default>
+        <leytech_prototypeupdate>
+            <settings>
+                <enabled>0</enabled>
+                <prototype_version>default</prototype_version>
+            </settings>
+        </leytech_prototypeupdate>
+    </default>
+</config>
