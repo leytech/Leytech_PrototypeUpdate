@@ -18,12 +18,19 @@ class Leytech_PrototypeUpdate_Model_Observer
             return $this;
         }
 
+        // Get head block
+        $head = Mage::app()->getLayout()->getBlock('head');
+
+        // Do nothing if head block doesn't exist
+        if (!$head) {
+            return $this;
+        }
+        
+        // Get head items
+        $headItems = $head->getData('items');
+
         // Configured prototype.js version
         $version = $helper->getPrototypeVersion();
-
-        // Get head items
-        $head = Mage::app()->getLayout()->getBlock('head');
-        $headItems = $head->getData('items');
 
         // Replace library if configured version is valid
         if (isset($headItems['js/prototype/prototype.js']) && $helper->isVersionValid($version)) {
